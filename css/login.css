@@ -1,0 +1,78 @@
+/*login*/
+*{
+  padding: 0;margin: 0;list-style: none;
+}
+
+.clearfix:after {clear:both;content:'';display:block;}
+html,body{
+  width: 100%;
+  height: 92%;
+  background: #d2d6de;
+}
+.login{
+  width:400px;
+  margin:8% auto;
+  padding:20px;
+  background: #fff;
+  border: none;
+  border-radius: 6px;
+}
+.login h2{
+  font-weight: normal;
+  text-align: center;
+  font-size:22px;
+  color: rgb(0,148,222);
+  font-family: '微软雅黑';
+}
+.login .form-group{
+  position: relative;
+  margin:30px 0;
+}
+.login .form-group label{
+  position: absolute;
+  top:8px;
+  left:6px;
+  font-weight: normal;
+}
+.login .form-group input{
+  padding-left:58px; 
+}
+input[type='button']{
+  padding:6px 20px;
+  cursor: pointer;
+  margin:0 30px;
+  border-radius: 4px;
+}
+.button{
+  width:100%;
+  text-align: center;
+}
+
+
+/*=================首页样式================*/
+.container{
+  width:100%;
+  padding:0;
+  margin:0;
+}
+.box-left{
+  background:linear-gradient(#508bff,#815efe);
+  color: #fff;
+  text-align: center;
+  padding:30px 0 20px;
+}
+#out{
+  float: right;
+}
+.box-right{
+  background: #fff;
+}
+.logo{
+  width:50px;
+  height: 50px;
+  border-radius: 100%;
+  background: #fff;
+  margin: 0 auto;
+}
+
+

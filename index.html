@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>home</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/login.css">
+	<script type="text/javascript" src="js/jquery-1.12.4.js"></script>
+	<script type="text/javascript" src="js/bootstrap.js"></script>
+	<script type="text/javascript" src="js/login.js"></script>
+	<script src="https://cdn.bootcss.com/angular.js/1.4.9/angular.min.js"></script> -->
+</head>
+<body>
+	 <div ng-app="myApp" ng-controller="Ctrl" id="app">
+		<div class="header">
+			<div id="out"><input type="button" name="" value="退出登录"></div>
+		</div>
+		<div class="container">
+			<div class="col-lg-2 col-md-2 col-sm-2 box-left">
+	      		<div class="logo"></div>
+		    </div>
+		    <div class="col-lg-10 col-md-10 col-sm-10  box-right">
+		    	<table class="table table-bordered table-striped">
+		    		<tr>
+		    			<th>账号</th>
+		    			<th>操作</th>
+		    		</tr>
+		    		<tr ng-repeat="x in data">
+		    			<td>{{x.name}}</td>
+		    			<td>{{x.password}}</td>
+		    		</tr>
+		    	</table>
+		    </div>
+		</div>
+	</div>
+<script>
+    $('#myTab a:first').tab('show');
+    var app = angular.module('myApp', []);
+    app.controller('Ctrl', function($scope, $http, $location) {
+      $http.get("http://interview.emicmh.com/getUser").then(function (resp) {
+        if(resp.data.code !=200){
+          return;
+        }
+
+      	$scope.data =resp.data.data;
+      });
+    });
+
+</script>
+</body>
+</html>
